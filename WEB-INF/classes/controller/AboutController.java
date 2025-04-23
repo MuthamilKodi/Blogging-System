@@ -1,0 +1,91 @@
+package controller;
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.http.*;
+public class AboutController extends HttpServlet{
+	public void service(HttpServletRequest req,HttpServletResponse res){
+		try{
+			res.setContentType("text/html");
+			PrintWriter out=res.getWriter();
+			out.println("<html>");
+			out.println("	<head>");
+			out.println("		<meta charset='utf-8'>");
+			out.println("		<meta name='viewport' content='width=device-width,initial-scale=1.0'>");
+			out.println("		<title>ABOUT</title>");
+			out.println("		<link rel='stylesheet' href='./static/css/style.css'>");
+			out.println("	</head>");
+			out.println("	<body>");
+			out.println("		<nav>");
+			out.println("			<div class='container nav_container'>");
+			out.println("				<a class='nav_logo' href='/blogsite/home'>BLOG SITE</a>");
+			out.println("				<ul class='nav_items'>");
+			out.println("					<li><a href='/blogsite/about'>About</a></li>");
+			out.println("					<li><a href='/blogsite/contact'>Contact</a></li>");
+			out.println("					<li class='categ_menu'><a>Category</a>");
+			out.println("						<ul>");
+			out.println("							<li><a href='/blogsite/yoga'>Yoga</a></li>");
+			out.println("							<li><a href='/blogsite/food'>Food</a></li>");
+			out.println("						</ul>");
+			out.println("					</li>");
+			out.println("					<li><a href='/blogsite/signin'>Signin</a></li>");
+			out.println("					<li><a href='/blogsite/signup'>Signup</a></li>");
+			out.println("					<li class='nav_profile'>");
+			out.println("						<div class='avatar'>");
+			out.println("							<img src='./static/images/avatar1.jpg'>");
+			out.println("						</div>");
+			out.println("						<ul>");
+			out.println("							<li><a href='/blogsite/dashboard'>Dashboard</a></li>");
+			out.println("							<li><a href='/blogsite/logout'>Logout</a></li>");
+			out.println("						</ul>");
+			out.println("					</li>");
+			out.println("				</ul>");
+			out.println("			</div>");
+			out.println("		</nav>");
+			out.println("		<!--===========================NAV END====================================-->");
+			out.println("		<section class='empty_page'>");
+			out.println("			<h1>ABOUT PAGE</h1>");
+			out.println("		</section>");
+			out.println("		<!--============================ABOUT=====================================-->");
+			out.println("		<footer>");
+			out.println("			<div class='container footer_container'>");
+			out.println("				<article>");
+			out.println("					<h1>Categories</h1>");
+			out.println("					<ul>");
+			out.println("						<li><a href='/blogsite/#'>Art</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Wild Craft</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Yoga</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Sports</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Food</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Entertainment</a></li>");
+			out.println("				</article>");
+			out.println("				<article>");
+			out.println("					<h1>Blog</h1>");
+			out.println("					<ul>");
+			out.println("						<li><a href='/blogsite/#'>Safety</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Repair</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Recent</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Popular</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Categories</a></li>");
+			out.println("				</article>");
+			out.println("				<article>");
+			out.println("					<h1>Permalinks</h1>");
+			out.println("					<ul>");
+			out.println("						<li><a href='/blogsite/#'>Home</a></li>");
+			out.println("						<li><a href='/blogsite/#'>About</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Services</a></li>");
+			out.println("						<li><a href='/blogsite/#'>Contact</a></li>");
+			out.println("				</article>");
+			out.println("			</div>");
+			out.println("			<div class='footer_copyright'>");
+			out.println("				<small>Copyright &copy; Blog Site All Rights Reserved</small>");
+			out.println("			</div>");
+			out.println("		</footer>");
+			out.println("		<!--===============================================FOOTER END=======================================-->");
+			out.println("	</body>");
+			out.println("</html>");
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
+	}
+}
